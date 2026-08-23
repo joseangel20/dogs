@@ -19,8 +19,6 @@ export default function Home() {
 
         <section>
           <Cards />
-          <Cards />
-          <Cards />
         </section>
       </main>
       <Footer />
