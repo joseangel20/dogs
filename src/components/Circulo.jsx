@@ -1,11 +1,9 @@
 export default function Circulo() {
   return (
-    <>
-      <div aria-label="Contenedor menus de circulos" className="circulo">
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-      </div>
-    </>
+    <div role="group" aria-label="Navegación del banner" className="circulo">
+      <button>.</button>
+      <button>.</button>
+      <button>.</button>
+    </div>
   );
 }

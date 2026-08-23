@@ -1,8 +1,9 @@
+import logo from "../assets/logo.png";
 export default function Header() {
   return (
     <header>
       <img
-        src="/src/assets/logo.png"
+        src={logo}
         alt="Logo - manos sosteniendo un perro con un corazón"
       />
       <nav>
