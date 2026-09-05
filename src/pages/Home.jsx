@@ -1,7 +1,7 @@
 import Header from "../components/Header";
-import Banner from "../components/Banner";
-import Select from "../components/Select";
-import Cards from "../components/Cards";
+import Banner from "../components/home/Banner";
+import Select from "../components/home/Select";
+import Cards from "../components/home/Cards";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -11,13 +11,13 @@ export default function Home() {
       <Banner />
 
       <main>
-        <section>
+        <section className="filters" aria-label="Filtrar perros">
           <Select text="Edad" />
           <Select text="Tamaño" />
           <Select text="Ubicación" />
         </section>
 
-        <section>
+        <section className="dogs-section" aria-label="Perros en adopción">
           <Cards />
         </section>
       </main>
