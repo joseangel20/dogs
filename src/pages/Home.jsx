@@ -7,17 +7,17 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header/>
       <Banner />
 
       <main>
-        <section className="filters" aria-label="Filtrar perros">
+        <section>
           <Select text="Edad" />
           <Select text="Tamaño" />
           <Select text="Ubicación" />
         </section>
 
-        <section className="dogs-section" aria-label="Perros en adopción">
+        <section>
           <Cards />
         </section>
       </main>
