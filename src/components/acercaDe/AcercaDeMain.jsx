@@ -21,7 +21,7 @@ const pilaresData = [
 export default function AcercaDeMain() {
   return (
     <main>
-      <article>
+      <article className="articleAcercaDe">
         <h2>Quiénes somos</h2>
         <section>
           <h3>Misión:</h3>
@@ -33,7 +33,7 @@ export default function AcercaDeMain() {
         </section>
       </article>
 
-      <article>
+      <article className="articleAcercaDe">
         <h2>Nuestros Pilares</h2>
         <Pilares pilaresData={pilaresData} />
       </article>
