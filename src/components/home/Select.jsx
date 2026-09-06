@@ -1,6 +1,6 @@
 export default function Select({ text }) {
   return (
-    <div role ="group" aria-label={`Seleccionar ${text}`} className="select">
+    <div className="select" role ="group" aria-label={`Seleccionar ${text}`}>
       <label htmlFor={text}>{text}:</label>
 
       <select id={text}>

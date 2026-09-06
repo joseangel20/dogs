@@ -10,14 +10,14 @@ export default function Home() {
       <Header/>
       <Banner />
 
-      <main>
-        <section>
+      <main className="main" aria-label="Contenido principal">
+        <section className="contentSelects" aria-label="Filtros de búsqueda">
           <Select text="Edad" />
           <Select text="Tamaño" />
           <Select text="Ubicación" />
         </section>
 
-        <section>
+        <section className="cards" aria-label="Perros en adopción">
           <Cards />
         </section>
       </main>

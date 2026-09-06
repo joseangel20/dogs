@@ -2,9 +2,9 @@ import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
 export default function Footer() {
   return (
-    <footer>
+    <footer className="site-footer" aria-label="Pie de página">
       <p>Copyright © Jose Garcia 2026. All rights reserved.</p>
-      <div aria-label="Redes sociales">
+      <div className="redes" aria-label="Redes sociales">
         Síguenos en:
         <a href="#" aria-label="Instagram">
           <img src={instagram} alt="Instagram" />
