@@ -6,10 +6,10 @@ export default function Footer() {
       <p>Copyright © Jose Garcia 2026. All rights reserved.</p>
       <div className="redes" aria-label="Redes sociales">
         Síguenos en:
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/jose20thebest/" aria-label="Instagram" target="_blank">
           <img src={instagram} alt="Instagram" />
         </a>
-        <a href="#" aria-label="Facebook">
+        <a href="https://web.facebook.com/j20thebest/" aria-label="Facebook" target="_blank">
           <img src={facebook} alt="Facebook" />
         </a>
       </div>

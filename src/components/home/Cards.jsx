@@ -1,25 +1,16 @@
 import Card from "./Card";
-export default function Cards() {
+export default function Cards({ dogs }) {
   return (
     <>
-      <Card
-        ruta="/src/assets/images (1).jfif"
-        alt={"Perro en adopción"}
-        titulo={"Max"}
-        descripcion={"Edad: 2 años Tamaño: Mediano Ubicación: Ciudad A"}
-      />
-      <Card
-        ruta="/src/assets/images (4).jpg"
-        alt={"Perro en adopción"}
-        titulo={"Max"}
-        descripcion={"Edad: 2 años Tamaño: Mediano Ubicación: Ciudad A"}
-      />
-      <Card
-        ruta="/src/assets/images.jfif"
-        alt={"Perro en adopción"}
-        titulo={"Max"}
-        descripcion={"Edad: 2 años Tamaño: Mediano Ubicación: Ciudad A"}
-      />
+      {dogs.map((dog) => (
+        <Card
+          key={dog.id}
+          id={dog.id}
+          name={dog.name}
+          temperament={dog.temperament}
+          src={dog.image?.url}
+        />
+      ))}
     </>
   );
 }

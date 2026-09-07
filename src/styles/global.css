@@ -143,6 +143,8 @@ main {
   line-height: 20px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .cards .card img {
@@ -158,10 +160,20 @@ main {
 
 .textCard {
   text-align: left;
+  flex: 1;
+  min-height: 125px;
+}
+
+.textCard p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .card button {
   align-self: center;
+  margin-top: auto;
 }
 
 .site-footer {

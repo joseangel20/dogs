@@ -1,13 +1,15 @@
-export default function Select({ text }) {
+export default function Select({ text, values }) {
   return (
-    <div className="select" role ="group" aria-label={`Seleccionar ${text}`}>
+    <div className="select" role="group" aria-label={`Seleccionar ${text}`}>
       <label htmlFor={text}>{text}:</label>
 
       <select id={text}>
         <option value="Seleccionar">Seleccionar</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        {values.map((value) => (
+          <option key={value} value={value}>
+            {value}
+          </option>
+        ))}
       </select>
     </div>
   );

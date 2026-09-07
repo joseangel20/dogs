@@ -3,22 +3,28 @@ import Banner from "../components/home/Banner";
 import Select from "../components/home/Select";
 import Cards from "../components/home/Cards";
 import Footer from "../components/Footer";
+import { useLoaderData } from "react-router-dom";
 
 export default function Home() {
+  const { dogs, breeds } = useLoaderData();
+  const razas = [];
+  for (const breed in breeds) {
+    razas.push(breed);
+  }
   return (
     <>
-      <Header/>
+      <Header />
       <Banner />
 
       <main className="main" aria-label="Contenido principal">
         <section className="contentSelects" aria-label="Filtros de búsqueda">
-          <Select text="Edad" />
-          <Select text="Tamaño" />
-          <Select text="Ubicación" />
+          <Select values={razas} text="Edad" />
+          <Select values={razas} text="Tamaño" />
+          <Select values={razas} text="Ubicación" />
         </section>
 
         <section className="cards" aria-label="Perros en adopción">
-          <Cards />
+          <Cards dogs={dogs} />
         </section>
       </main>
       <Footer />
