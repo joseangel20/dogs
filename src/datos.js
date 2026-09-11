@@ -17,6 +17,7 @@ const dogsLoaders = async () => {
 const dogsLoadersBreeds = async () => {
   try {
     const response = await fetch("https://dog.ceo/api/breeds/list/all", {
+
       headers: { "x-api-key": API_KEY },
     });
 

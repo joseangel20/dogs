@@ -18,7 +18,7 @@ export default function Home() {
 
       <main className="main" aria-label="Contenido principal">
         <section className="contentSelects" aria-label="Filtros de búsqueda">
-          <Select values={razas} text="Edad" />
+          <Select values={razas} text="Raza" />
           <Select values={razas} text="Tamaño" />
           <Select values={razas} text="Ubicación" />
         </section>

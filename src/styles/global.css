@@ -2,7 +2,6 @@
   font-family: 'nunito', sans-serif;
   color: #3E2723;
   background-color: #FFF;
-
 }
 
 * {
@@ -10,8 +9,9 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+
 }
 
 button,
@@ -72,15 +72,13 @@ button {
   width: 80%;
   margin: 45px auto 40px auto;
   text-align: center;
-  font-size: clamp(.8rem, 1.5vw, 3rem);
+  font-size: clamp(.8rem, 1.5vw, 2rem);
   background-color: #D9D9D9;
   box-shadow: inset 0 0 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 1rem;
-  gap: 1rem; */
 }
 
 .banner__image {
@@ -124,24 +122,25 @@ main {
 }
 
 .cards {
-  width: 100%;
+  /* width: 100%; */
   border: .5px #cacaca solid;
   background-color: #F7F4F0;
   border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   justify-content: space-evenly;
-  gap: 2rem;
-  padding: 2rem 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 
 .cards .card {
-  width: 210px;
-  padding: 5px;
+  
   letter-spacing: 1px;
   line-height: 20px;
-  margin: 0 auto;
+  margin: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -155,10 +154,12 @@ main {
 }
 
 .card h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .textCard {
+  font-size: clamp(.9rem, 1vw, 16px);
   text-align: left;
   flex: 1;
   min-height: 125px;
@@ -245,15 +246,22 @@ main {
 
 /* Contenedor blanco/beige con esquinas redondeadas */
 .articleAcercaDe {
-  background-color: #F7F4F0; /* Fondo beige claro de tus tarjetas */
-  width: 100%;               /* Se adapta a tu contenedor .main (80%) */
-  max-width: 850px;          /* Evita que se estire demasiado en pantallas gigantes */
-  padding: 3rem 4rem;        /* Espacio interno amplio para que se vea elegante */
-  border-radius: 25px;       /* Esquinas redondeadas idénticas a la foto */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+  background-color: #F7F4F0;
+  /* Fondo beige claro de tus tarjetas */
+  width: 100%;
+  /* Se adapta a tu contenedor .main (80%) */
+  max-width: 850px;
+  /* Evita que se estire demasiado en pantallas gigantes */
+  padding: 3rem 4rem;
+  /* Espacio interno amplio para que se vea elegante */
+  border-radius: 25px;
+  /* Esquinas redondeadas idénticas a la foto */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  /* Sombra muy sutil */
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;               /* Separa el h2 centrado de los bloques de texto */
+  gap: 2.5rem;
+  /* Separa el h2 centrado de los bloques de texto */
   margin-bottom: 2rem;
   margin-top: 45px;
 }
@@ -263,34 +271,41 @@ main {
   text-align: center;
   font-size: 2.2rem;
   font-weight: bold;
-  color: #000000;            /* Negro sólido de la foto */
+  color: #000000;
+  /* Negro sólido de la foto */
   margin: 0;
 }
 
 /* REJILLA: Aplica tanto a Misión como a cada pilar de tu componente */
 .articleAcercaDe section.pilar-item,
-.articleAcercaDe > section {
+.articleAcercaDe>section {
   display: grid;
-  grid-template-columns: 220px 1fr; /* Columna izquierda fija para títulos, derecha para texto */
-  align-items: baseline;            /* Alinea perfectamente las bases de las letras */
-  gap: 1.5rem;                      /* Distancia entre el título y el párrafo */
+  grid-template-columns: 220px 1fr;
+  /* Columna izquierda fija para títulos, derecha para texto */
+  align-items: baseline;
+  /* Alinea perfectamente las bases de las letras */
+  gap: 1.5rem;
+  /* Distancia entre el título y el párrafo */
 }
 
 /* Títulos de la izquierda ("Misión:", "Responsabilidad:", etc.) */
 .articleAcercaDe h3 {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #3E2723;            /* Tu color marrón de marca */
+  color: #3E2723;
+  /* Tu color marrón de marca */
   margin: 0;
   display: flex;
-  justify-content: flex-end; /* 💡 Alinea el texto a la derecha para lograr el efecto de la foto */
+  justify-content: flex-end;
+  /* 💡 Alinea el texto a la derecha para lograr el efecto de la foto */
   text-align: right;
 }
 
 /* Párrafos descriptivos de la derecha */
 .articleAcercaDe p {
   font-size: 1.05rem;
-  line-height: 1.6;          /* Espaciado de línea cómodo para lectura */
+  line-height: 1.6;
+  /* Espaciado de línea cómodo para lectura */
   color: #212121;
   margin: 0;
   text-align: left;
@@ -301,17 +316,20 @@ main {
    ========================================================================== */
 @media (max-width: 768px) {
   .articleAcercaDe {
-    padding: 2rem 1.5rem;    /* Reduce los espacios internos en pantallas chicas */
+    padding: 2rem 1.5rem;
+    /* Reduce los espacios internos en pantallas chicas */
   }
 
   .articleAcercaDe section.pilar-item,
-  .articleAcercaDe > section {
-    grid-template-columns: 1fr; /* En celulares, el título se pone arriba del párrafo */
+  .articleAcercaDe>section {
+    grid-template-columns: 1fr;
+    /* En celulares, el título se pone arriba del párrafo */
     gap: 0.4rem;
   }
 
   .articleAcercaDe h3 {
-    justify-content: flex-start; /* En celulares, alineamos los títulos a la izquierda */
+    justify-content: flex-start;
+    /* En celulares, alineamos los títulos a la izquierda */
     text-align: left;
   }
 }
@@ -325,15 +343,18 @@ main {
 
 /* Puedes envolver el h1 y el form en un contenedor <article> para reusar tu diseño anterior */
 .contacto-container {
-  background-color: #F7F4F0; /* Fondo beige claro de tus tarjetas */
+  background-color: #F7F4F0;
+  /* Fondo beige claro de tus tarjetas */
   width: 100%;
-  max-width: 750px;          /* Un ancho ideal para formularios */
+  max-width: 750px;
+  /* Un ancho ideal para formularios */
   padding: 3rem 4rem;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Centra el título y el botón en el eje horizontal */
+  align-items: center;
+  /* Centra el título y el botón en el eje horizontal */
   gap: 2.5rem;
   margin: 45px auto 2rem auto;
 }
@@ -350,32 +371,42 @@ main {
 /* El elemento <form> que contiene las entradas */
 .contacto-container form {
   width: 100%;
-  max-width: 500px;          /* Limita el ancho del bloque interno del formulario */
+  max-width: 500px;
+  /* Limita el ancho del bloque interno del formulario */
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;               /* Separación vertical idéntica entre cada campo */
+  gap: 1.8rem;
+  /* Separación vertical idéntica entre cada campo */
 }
 
 /* REJILLA: Cada label controla el texto y su input de forma alineada */
 .contacto-container label {
   display: grid;
-  grid-template-columns: 140px 1fr; /* 140px fijos para los textos, el resto para el input */
-  align-items: center;              /* Centra verticalmente el texto con su caja */
-  gap: 1.5rem;                      /* Distancia entre la palabra y el input */
+  grid-template-columns: 140px 1fr;
+  /* 140px fijos para los textos, el resto para el input */
+  align-items: center;
+  /* Centra verticalmente el texto con su caja */
+  gap: 1.5rem;
+  /* Distancia entre la palabra y el input */
   font-size: 1.3rem;
   font-weight: bold;
-  color: #3E2723;                   /* Tu color marrón de marca */
-  text-align: right;                /* Empuja los textos hacia el input */
+  color: #3E2723;
+  /* Tu color marrón de marca */
+  text-align: right;
+  /* Empuja los textos hacia el input */
 }
 
 /* Estilo para los cuadros de texto (<input>) */
 .contacto-container input {
   width: 100%;
-  height: 42px;                     /* Altura cómoda para escribir */
+  height: 42px;
+  /* Altura cómoda para escribir */
   padding: 0 1rem;
   border: 1px solid #CACACA;
-  border-radius: 12px;              /* Bordes ligeramente redondeados como en la foto */
-  background-color: #F2F2F2;        /* Fondo grisáceo claro idéntico a la imagen */
+  border-radius: 12px;
+  /* Bordes ligeramente redondeados como en la foto */
+  background-color: #F2F2F2;
+  /* Fondo grisáceo claro idéntico a la imagen */
   font-size: 1rem;
   color: #333;
   outline: none;
@@ -384,16 +415,20 @@ main {
 
 /* Efecto visual cuando el usuario hace clic para escribir */
 .contacto-container input:focus {
-  border-color: #6f3e09;            /* Cambia al color de tu botón al activarse */
+  border-color: #6f3e09;
+  /* Cambia al color de tu botón al activarse */
 }
 
 /* Forzar que el botón de enviar se centre de forma independiente */
 .contacto-container button[type="submit"] {
-  align-self: center;               /* Centra el botón abajo en el medio */
+  align-self: center;
+  /* Centra el botón abajo en el medio */
   margin-top: 1rem;
-  width: 180px;                     /* Un poco más ancho para que quepa bien "Contactar" */
+  width: 180px;
+  /* Un poco más ancho para que quepa bien "Contactar" */
   height: 45px;
-  background-color: #6f3e09;        /* El color naranja/marrón claro de tu botón de la foto */
+  background-color: #6f3e09;
+  /* El color naranja/marrón claro de tu botón de la foto */
   border-radius: 25px;
   font-weight: bold;
 }
@@ -410,10 +445,12 @@ main {
   .contacto-container {
     padding: 2rem 1.5rem;
   }
-  
+
   .contacto-container label {
-    grid-template-columns: 1fr;    /* En celulares, el texto se pone arriba y el input abajo */
+    grid-template-columns: 1fr;
+    /* En celulares, el texto se pone arriba y el input abajo */
     gap: 0.4rem;
-    text-align: left;              /* Alineación clásica a la izquierda en pantallas chicas */
+    text-align: left;
+    /* Alineación clásica a la izquierda en pantallas chicas */
   }
 }
