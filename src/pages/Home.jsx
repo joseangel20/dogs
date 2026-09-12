@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 export default function Home() {
   const { filter, breeds } = useLoaderData();
   const navigation = useNavigation();
-
+  const order = ["ASC", "DESC", "RANDOM"];
   const razas = [];
 
   for (const breed in breeds) {
@@ -22,26 +22,15 @@ export default function Home() {
 
       <main className="main" aria-label="Contenido principal">
         <section className="contentSelects" aria-label="Filtros de búsqueda">
-          <Select
-            name="razas"
-            values={razas}
-            text="razas"
-          />
-          <Select
-            name="edad"
-            values={razas}
-            text="Tamaño"
-          />
-          <Select
-            name="origen"
-            values={razas}
-            text="Ubicación"
-          />
+          <Select text="Razas" propiedad={"q"} values={razas} />
+          <Select text="Ordenar" propiedad={"order"} values={order} />
         </section>
 
         <section className="cards" aria-label="Perros en adopción">
           {navigation.state === "loading" ? (
             <p>Cargando perros...</p>
+          ) : filter.length == 0 ? (
+            <p>No hay perros para esta raza.</p>
           ) : (
             <Cards dogs={filter} />
           )}

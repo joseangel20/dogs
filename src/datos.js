@@ -1,12 +1,14 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-const filterBeerds = async ({ request}) => {
+const filterBeerds = async ({ request }) => {
   try {
     const url = new URL(request.url);
+    const order = url.searchParams.get("order") || "ASC";
     const breed = url.searchParams.get("q") || "";
+    
     const endpoint = breed
-      ? `${BASE_URL}/breeds/search?q=${breed}`
+      ? `${BASE_URL}/breeds/search?q=${breed}&${order}`
       : `${BASE_URL}/breeds?limit=12`;
 
     const response = await fetch(endpoint, {

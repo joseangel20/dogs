@@ -1,22 +1,27 @@
 import { useSearchParams } from "react-router-dom";
 
-export default function Select({ name, text, values }) {
+export default function Select({ text, propiedad, values }) {
   const [searchParams, setSearchParams] = useSearchParams();
-
+  
   function handleFilter(event) {
-    if (name === "razas") {
-      const breed = event.currentTarget.value;
-      setSearchParams(breed ? { q: breed } : {});
+    const select = event.currentTarget.value;
+    const nextSearchParams = new URLSearchParams(searchParams);
+
+    if (select) {
+      nextSearchParams.set(propiedad, select);
+    } else {
+      nextSearchParams.delete(propiedad);
     }
+
+    setSearchParams(nextSearchParams);
   }
 
   return (
     <div className="select" role="group" aria-label={`Seleccionar ${text}`}>
       <label htmlFor={text}>{text}:</label>
 
-      <select value={searchParams.get("q") || ""} onChange={handleFilter}>
+      <select value={searchParams.get(propiedad) || ""} onChange={handleFilter}>
         <option value="">Seleccionar</option>
-        <option value="">Todas las razas</option>
 
         {values.map((value) => (
           <option key={value} value={value}>
