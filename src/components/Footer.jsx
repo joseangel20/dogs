@@ -1,5 +1,5 @@
-import instagram from "../assets/instagram.png";
-import facebook from "../assets/facebook.png";
+import instagram from "../assets/instagram.webp";
+import facebook from "../assets/facebook.webp";
 export default function Footer() {
   return (
     <footer className="site-footer" aria-label="Pie de página">

@@ -24,7 +24,7 @@ button {
   /* background: #C67A26; */
   color: white;
   border: 0;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 0.7rem 1rem;
   cursor: pointer;
   width: 120px;
@@ -79,11 +79,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .banner__image {
   width: 90%;
   margin: -15px 0 10px 0;
+
 }
 
 .groupButton {
@@ -98,6 +100,13 @@ button {
   /* border: 1px solid rgba(0, 0, 0, 0.25); */
   padding: 0;
   margin-bottom: 15px;
+}
+
+.groupButton .actual{
+  width: 15px;
+  height: 15px;
+  background-color: rgb(61, 60, 60);
+ 
 }
 
 main {
@@ -119,10 +128,11 @@ main {
   /* gap: 1.5rem; */
   width: 80%;
   font-size: clamp(1rem, 1vw, 2rem);
+  box-shadow: 1px 1px 6px -4px;
 }
 
 .cards {
-  /* width: 100%; */
+
   border: .5px #cacaca solid;
   background-color: #F7F4F0;
   border-radius: 25px;
@@ -131,16 +141,16 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   justify-content: space-evenly;
-  width: 100%;
+  width: inherit;
   margin: 0 auto;
 }
 
 
 .cards .card {
-  
+  width: 200px;
   letter-spacing: 1px;
   line-height: 20px;
-  margin: 10px;
+  margin: 5px auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -149,7 +159,7 @@ main {
 .cards .card img {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.25);
 }
 

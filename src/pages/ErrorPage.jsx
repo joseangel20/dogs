@@ -12,7 +12,7 @@ export default function ErrorPage() {
         {error.statusText || error.message}
       </p>
 
-      <Link to="/acerca" style={{ color: "blue", textDecoration: "underline" }}>
+      <Link to="/" style={{ color: "blue", textDecoration: "underline" }}>
         Volver al Inicio
       </Link>
     </div>
