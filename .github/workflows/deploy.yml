@@ -34,6 +34,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_URL: https://api.thedogapi.com/v1
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
