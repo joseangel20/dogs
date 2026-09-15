@@ -7,22 +7,25 @@ import Contacto from "./pages/Contacto";
 import ErrorPage from "./pages/ErrorPage";
 import { homeLoader } from "./datos.js";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    loader: homeLoader,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/acerca",
-    element: <AcercaDe />,
-  },
-  {
-    path: "/contacto",
-    element: <Contacto />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+      loader: homeLoader,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/acerca",
+      element: <AcercaDe />,
+    },
+    {
+      path: "/contacto",
+      element: <Contacto />,
+    },
+  ],
+  { basename: "/dogs" },
+);
 
 import "../src/styles/global.css";
 
